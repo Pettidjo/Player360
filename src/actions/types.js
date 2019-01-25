@@ -1,0 +1,1 @@
+export const FETCH_API_PLAYER = 'fetch_api_player';
