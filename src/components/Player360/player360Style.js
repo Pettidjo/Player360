@@ -3,7 +3,7 @@ const width = 600;
 const style = {
   container360: {
     position: 'relative',
-    margin: '24px',
+    margin: '24px 0',
     width: width + 'px',
   },
   wrapperPlayer360: {
