@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/Player360/static/js/runtime~main.dcc67ec5.js"
   },
   {
-    "revision": "7f0ab59cd7cde8b9b2c0",
-    "url": "/Player360/static/js/main.7f0ab59c.chunk.js"
+    "revision": "30433ef04dc17c927241",
+    "url": "/Player360/static/js/main.30433ef0.chunk.js"
   },
   {
-    "revision": "7b238c2d5332284d532d",
-    "url": "/Player360/static/js/1.7b238c2d.chunk.js"
+    "revision": "adca6fa3d42667423435",
+    "url": "/Player360/static/js/1.adca6fa3.chunk.js"
   },
   {
-    "revision": "7f0ab59cd7cde8b9b2c0",
+    "revision": "30433ef04dc17c927241",
     "url": "/Player360/static/css/main.1115d17d.chunk.css"
   },
   {
-    "revision": "7b238c2d5332284d532d",
+    "revision": "adca6fa3d42667423435",
     "url": "/Player360/static/css/1.fdff819c.chunk.css"
   },
   {
-    "revision": "f7b761209b14eca38ca9e46fbb79a711",
+    "revision": "4f4b415a226c8528846cd796fc19734e",
     "url": "/Player360/index.html"
   }
 ];
