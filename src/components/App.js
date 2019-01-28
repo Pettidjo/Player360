@@ -6,7 +6,8 @@ import Radium,{StyleRoot} from 'radium';
 
 // Components
 import Header from './Header';
-import Player360 from './Player360';
+import Player360 from './Player360/Player360';
+import Galerie from './Galerie';
 
 class App extends Component {
   componentDidMount() {
@@ -19,6 +20,7 @@ class App extends Component {
         <div>
           <Header />
           <Player360 view3d={this.props.outsidePanorama} />
+          <Galerie galerie={this.props.galerie} />
         </div>
       </StyleRoot>
     );
@@ -27,7 +29,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    outsidePanorama: find(state.player360, (view) => view.type === 'PANORAMA_OUTSIDE_CLOSE')
+    outsidePanorama: find(state.player360, (view) => view.type === 'PANORAMA_OUTSIDE_CLOSE'),
+    galerie: find(state.player360, (view) => view.type === 'STANDARD'),
   }
 }
 

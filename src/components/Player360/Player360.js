@@ -1,36 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import { map } from 'lodash';
 
-const width = 600;
-
-const style = {
-  wrapperPlayer360: {
-    position: 'relative',
-    width: width + 'px',
-    height: '476px',
-    overflowX: 'auto',
-    overflowY: 'hidden',
-    marginLeft: '24px',
-    paddingTop: '24px',
-    display: 'block',
-  },
-  wrapperScroll360: {
-    width: width * 2 + 'px',
-    backgroundColor: 'transparent',
-    height: '450px',
-    display: 'flex',
-    overflowX: 'scroll',
-    position: 'absolute',
-    zIndex: '1000',
-    cursor: 'grab'
-  },
-  wrapperImage: {
-    position: 'fixed',
-    width: '600px',
-  },
-}
+// style
+import style from './player360Style';
 
 class Player360 extends Component {
   constructor(props) {
@@ -78,9 +52,11 @@ class Player360 extends Component {
     this.setState({scrollLeft: elem.scrollLeft});
     this.setState({scrollTop: elem.scrollTop}); 
   }
+
   mouseUp = (e) => {
     this.setState({isDown: false});
   }
+  
   mouseLeave = (e) => {
     this.setState({isDown: false});
   }
@@ -120,13 +96,13 @@ class Player360 extends Component {
 
   render() {
     return (
-      <div id="wrapperPlayer360" ref='scrollingElement' style={style.wrapperPlayer360}>
-      {this.state.views &&
-        <Fragment>
-          <div id="scrolledDiv" onScroll={this.handleScroll} style={style.wrapperScroll360}></div>
-          { map(this.state.views, (view, id) => <img key={id} src={view} style={[style.wrapperImage, this.zIndexImage(id)]} />) }
-        </Fragment>
-      }
+      <div style={ style.container360 }>
+        {this.state.views &&
+          map(this.state.views, (view, id) => <img key={id} src={view} style={[style.wrapperImage, this.zIndexImage(id)]} />)
+        }        
+        <div id="wrapperPlayer360" ref='scrollingElement' style={style.wrapperPlayer360}>
+            <div id="scrolledDiv" onScroll={this.handleScroll} style={style.wrapperScroll360}></div>
+        </div>
       </div>
     )
   }
