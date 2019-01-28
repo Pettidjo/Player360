@@ -1,7 +1,7 @@
 {
   "main.css": "/Player360/static/css/main.1115d17d.chunk.css",
-  "main.js": "/Player360/static/js/main.30433ef0.chunk.js",
-  "main.js.map": "/Player360/static/js/main.30433ef0.chunk.js.map",
+  "main.js": "/Player360/static/js/main.359b33fc.chunk.js",
+  "main.js.map": "/Player360/static/js/main.359b33fc.chunk.js.map",
   "static/css/1.fdff819c.chunk.css": "/Player360/static/css/1.fdff819c.chunk.css",
   "static/js/1.adca6fa3.chunk.js": "/Player360/static/js/1.adca6fa3.chunk.js",
   "static/js/1.adca6fa3.chunk.js.map": "/Player360/static/js/1.adca6fa3.chunk.js.map",
@@ -10,6 +10,6 @@
   "static/css/1.fdff819c.chunk.css.map": "/Player360/static/css/1.fdff819c.chunk.css.map",
   "static/css/main.1115d17d.chunk.css.map": "/Player360/static/css/main.1115d17d.chunk.css.map",
   "index.html": "/Player360/index.html",
-  "precache-manifest.0b72b36aa1be1cf9cd39668b177899cf.js": "/Player360/precache-manifest.0b72b36aa1be1cf9cd39668b177899cf.js",
+  "precache-manifest.b39d37f0f43bf754b619877feec048c5.js": "/Player360/precache-manifest.b39d37f0f43bf754b619877feec048c5.js",
   "service-worker.js": "/Player360/service-worker.js"
 }
