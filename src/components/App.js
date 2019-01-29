@@ -8,6 +8,7 @@ import Radium,{StyleRoot} from 'radium';
 import Header from './Header';
 import Player360 from './Player360/Player360';
 import Galerie from './Galerie';
+import Inside360 from './Inside360';
 
 class App extends Component {
   constructor(props) {
@@ -30,7 +31,10 @@ class App extends Component {
       <StyleRoot>   
       <Header />
       <div className="container">
-          <Player360 view3d={this.state.typeOfView === 'OUTSIDE' ? this.props.outsidePanorama : this.props.insidePanorama} />
+        { this.state.typeOfView === 'OUTSIDE' ?
+          <Player360 view3d={this.props.outsidePanorama} /> :
+          <Inside360 view3d={this.props.insidePanorama} />
+        }
           <button 
             className="btn" 
             onClick={this.handleChange}>{this.state.typeOfView === 'OUTSIDE' ? 'Voir vue intertieur' : 'Voir vue exterieur'}

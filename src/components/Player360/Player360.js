@@ -21,6 +21,7 @@ class Player360 extends Component {
 
   componentDidMount() {
     const elem = ReactDOM.findDOMNode(this.refs.scrollingElement);
+    this.getImages();
     
     elem.addEventListener('scroll', this.handleScroll);
     elem.addEventListener('mousedown', e => this.mouseIsDown(e));  
