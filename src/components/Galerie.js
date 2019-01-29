@@ -45,7 +45,7 @@ class Galerie extends Component {
   render() {
     return (
       <div style={style.galerie}>
-        {this.state.images && map(this.state.images, (urlImg, id) => <img src={urlImg} key={id} style={style.image} className="z-depth-3" />)}
+        {this.state.images && map(this.state.images, (urlImg, id) => <img src={urlImg} key={id} style={style.image} className="z-depth-3" alt="" />)}
       </div>
     )
   }

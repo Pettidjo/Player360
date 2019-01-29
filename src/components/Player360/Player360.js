@@ -99,7 +99,7 @@ class Player360 extends Component {
     return (
       <div style={ style.container360 }>
         {this.state.views &&
-          map(this.state.views, (view, id) => <img key={id} src={view} style={[style.wrapperImage, this.zIndexImage(id)]} />)
+          map(this.state.views, (view, id) => <img key={id} src={view} style={[style.wrapperImage, this.zIndexImage(id)]} alt="" />)
         }        
         <div id="wrapperPlayer360" ref='scrollingElement' style={style.wrapperPlayer360}>
             <div id="scrolledDiv" onScroll={this.handleScroll} style={style.wrapperScroll360}></div>

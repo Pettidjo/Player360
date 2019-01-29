@@ -29,9 +29,10 @@ class Inside360 extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{margin: '24px 0'}}>
       {this.state.views && 
         <Pannellum
+          margin='24px 0'
           width="600px"
           height="450px"
           image={this.state.views}
@@ -39,8 +40,9 @@ class Inside360 extends Component {
           yaw={70}
           autoLoad
         >
-        { this.state.hotspots && map(this.state.hotspots, hotspot => (
+        { this.state.hotspots && map(this.state.hotspots, (hotspot, id) => (
           <Pannellum.Hotspot
+            key={id}
             type="info"
             pitch={hotspot.position.x}
             yaw={hotspot.position.y}
