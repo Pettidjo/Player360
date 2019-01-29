@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "adb137f0fa13eb025c13d13c727fe7fa",
-    "url": "/Player360/static/media/grab.adb137f0.svg"
+    "revision": "f37aa8ca72b5548a255c62dab1614437",
+    "url": "/Player360/static/media/sprites.f37aa8ca.svg"
   },
   {
-    "revision": "114ae7853e6629996846",
+    "revision": "dc927a7edea0c098436c",
     "url": "/Player360/static/css/main.d8673233.chunk.css"
   },
   {
@@ -20,27 +20,27 @@ self.__precacheManifest = [
     "url": "/Player360/static/js/runtime~main.dcc67ec5.js"
   },
   {
-    "revision": "114ae7853e6629996846",
-    "url": "/Player360/static/js/main.114ae785.chunk.js"
-  },
-  {
-    "revision": "9f2131c2974ff6dcfefe82f5727c466d",
-    "url": "/Player360/static/media/background.9f2131c2.svg"
+    "revision": "dc927a7edea0c098436c",
+    "url": "/Player360/static/js/main.dc927a7e.chunk.js"
   },
   {
     "revision": "3acfddd5c09c90a4f089f8d626aebca1",
     "url": "/Player360/static/media/grabbing.3acfddd5.svg"
   },
   {
-    "revision": "f37aa8ca72b5548a255c62dab1614437",
-    "url": "/Player360/static/media/sprites.f37aa8ca.svg"
+    "revision": "adb137f0fa13eb025c13d13c727fe7fa",
+    "url": "/Player360/static/media/grab.adb137f0.svg"
+  },
+  {
+    "revision": "9f2131c2974ff6dcfefe82f5727c466d",
+    "url": "/Player360/static/media/background.9f2131c2.svg"
   },
   {
     "revision": "5c5854e79974706ddad6",
     "url": "/Player360/static/css/1.b5ce127d.chunk.css"
   },
   {
-    "revision": "e552e12fb222122f91eaf5df66922404",
+    "revision": "19e9d4a0dec68ea565d34c74df0a2387",
     "url": "/Player360/index.html"
   }
 ];
