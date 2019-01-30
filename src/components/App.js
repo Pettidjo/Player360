@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
 import { find } from 'lodash';
-import Radium,{StyleRoot} from 'radium';
+import Radium, { StyleRoot } from 'radium';
+import * as actions from '../actions';
 
 // Components
-import Header from './Header';
-import Player360 from './Player360/Player360';
-import Galerie from './Galerie';
-import Inside360 from './Inside360';
+import Header from './header';
+import PanoramaOutside from './panoramaOutside';
+import Galerie from './galerie';
+import Inside360 from './panoramaInside';
+import Button from './utils/Button';
 
 class App extends Component {
   constructor(props) {
@@ -29,16 +30,13 @@ class App extends Component {
   render() {
     return (
       <StyleRoot>   
-      <Header />
-      <div className="container">
-        { this.state.typeOfView === 'OUTSIDE' ?
-          <Player360 view3d={this.props.outsidePanorama} /> :
-          <Inside360 view3d={this.props.insidePanorama} />
-        }
-          <button 
-            className="btn" 
-            onClick={this.handleChange}>{this.state.typeOfView === 'OUTSIDE' ? 'Voir vue intertieur' : 'Voir vue exterieur'}
-          </button>
+        <Header />
+        <div className="container">
+          { this.state.typeOfView === 'OUTSIDE' ?
+            <PanoramaOutside view3d={this.props.outsidePanorama} /> :
+            <Inside360 view3d={this.props.insidePanorama} />
+          }
+          <Button handleChange={this.handleChange} typeOfView={this.state.typeOfView} />
           <Galerie galerie={this.props.galerie} />
         </div>
       </StyleRoot>

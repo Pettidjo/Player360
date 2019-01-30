@@ -2,24 +2,7 @@ import React, { Component } from 'react';
 import Radium from 'radium';
 import { map } from 'lodash';
 
-const style = {
-  galerie: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    alignItems: 'flex-start',
-    flexDirection: 'row',
-    padding: '14px'
-  },
-  image: {
-    margin: '10px',
-    boxShadow: '3px 3px 8px 0px rgba(0,0,0,0.3)',
-    width: '180px',
-    transition: 'all .2s ease-in-out',
-     ':hover': {
-        transform: 'scale(1.1)'
-     }
-  }
-}
+import style from './galerieStyle';
 
 class Galerie extends Component {
   constructor(props) {
@@ -29,6 +12,10 @@ class Galerie extends Component {
     }
   }
 
+  componentDidMount() {
+    this.getImages();
+  }
+  
   componentDidUpdate(prevProps) {
     if (this.props.galerie !== prevProps.galerie) {
       this.getImages();
@@ -36,7 +23,7 @@ class Galerie extends Component {
   }
 
   getImages = () => {
-    const views = (this.props.galerie && this.props.galerie.originals) || null
+    const views = (this.props.galerie && this.props.galerie.originals)
     const viewsURL = map(views, view => view.url);
     
     this.setState({images: viewsURL});
@@ -45,7 +32,9 @@ class Galerie extends Component {
   render() {
     return (
       <div style={style.galerie}>
-        {this.state.images && map(this.state.images, (urlImg, id) => <img src={urlImg} key={id} style={style.image} className="z-depth-3" alt="" />)}
+        { this.state.images && 
+            map(this.state.images, (urlImg, id) => <img src={urlImg} key={id} style={style.image} alt="" />)
+        }
       </div>
     )
   }

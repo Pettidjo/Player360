@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import { map } from 'lodash';
 
-// style
-import style from './player360Style';
+import style from './panoramaOutsideStyle';
 
-class Player360 extends Component {
+class PanoramaOutside extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,9 +19,9 @@ class Player360 extends Component {
   }
 
   componentDidMount() {
-    const elem = ReactDOM.findDOMNode(this.refs.scrollingElement);
     this.getImages();
     
+    const elem = ReactDOM.findDOMNode(this.refs.scrollingElement);
     elem.addEventListener('scroll', this.handleScroll);
     elem.addEventListener('mousedown', e => this.mouseIsDown(e));  
     elem.addEventListener('mouseup', e => this.mouseUp(e))
@@ -32,7 +31,7 @@ class Player360 extends Component {
 
   componentWillUnmount() {
     const elem = ReactDOM.findDOMNode(this.refs.scrollingElement);
-    elem.removeEventListener('scroll', this.handleScroll);    elem.addEventListener('scroll', this.handleScroll);
+    elem.removeEventListener('scroll', this.handleScroll);
     elem.removeEventListener('mousedown', e => this.mouseIsDown(e));  
     elem.removeEventListener('mouseup', e => this.mouseUp(e))
     elem.removeEventListener('mouseleave', e => this.mouseLeave(e));
@@ -64,7 +63,7 @@ class Player360 extends Component {
   mouseMove = (e) => {
     const elem = ReactDOM.findDOMNode(this.refs.scrollingElement);
 
-    if(this.state.isDown){
+    if (this.state.isDown) {
       e.preventDefault();
   
       const x = e.pageX - elem.offsetLeft;
@@ -74,10 +73,13 @@ class Player360 extends Component {
   }
 
   getImages = () => {
-    const views = (this.props.view3d && this.props.view3d.originals) || null
-    const viewsURL = map(views, view => view.url);
-    
-    this.setState({views: viewsURL});
+    const views = (this.props.view3d && this.props.view3d.originals)
+
+    if (views !== null) {
+      const viewsURL = map(views, view => view.url);
+      
+      this.setState({views: viewsURL});
+    }
   }
 
   zIndexImage = (id) => {
@@ -90,9 +92,9 @@ class Player360 extends Component {
     const elem = ReactDOM.findDOMNode(this.refs.scrollingElement);
     const limit = Math.max(elem.scrollWidth, elem.offsetWidth) / 2;
     const nbImg = this.state.views.length - 1;
-    const nImg = Math.round(elem.scrollLeft / (limit / nbImg));
+    const numberImg = Math.round(elem.scrollLeft / (limit / nbImg));
 
-    this.setState({ viewToRender: nImg })
+    this.setState({ viewToRender: numberImg })
   }
 
   render() {
@@ -109,4 +111,4 @@ class Player360 extends Component {
   }
 }
 
-export default Radium(Player360);
+export default Radium(PanoramaOutside);

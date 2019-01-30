@@ -22,9 +22,11 @@ class Inside360 extends Component {
   }
 
   getImages = () => {
-    const views = (this.props.view3d && this.props.view3d.originals) || null
+    const views = (this.props.view3d && this.props.view3d.originals)
     
-    this.setState({views: views[0].url, hotspots: views[0].hotspots});
+    if (views !== null) {
+      this.setState({views: views[0].url, hotspots: views[0].hotspots});
+    }
   }
 
   render() {

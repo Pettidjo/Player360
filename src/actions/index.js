@@ -13,7 +13,6 @@ export const fetchApiPlayer = () => async dispatch => {
       'Content-Type': 'application/json',
       'cache-control': 'no-cache',
       'x-api-key': keys.apikey,
-      'Access-Control-Allow-Origin': 'http://localhost:3000/'
     }
   });
 
