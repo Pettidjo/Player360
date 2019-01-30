@@ -1,16 +1,16 @@
 {
   "main.css": "/Player360/static/css/main.d8673233.chunk.css",
-  "main.js": "/Player360/static/js/main.dc927a7e.chunk.js",
-  "main.js.map": "/Player360/static/js/main.dc927a7e.chunk.js.map",
+  "main.js": "/Player360/static/js/main.c5a9a32c.chunk.js",
+  "main.js.map": "/Player360/static/js/main.c5a9a32c.chunk.js.map",
   "static/css/1.b5ce127d.chunk.css": "/Player360/static/css/1.b5ce127d.chunk.css",
-  "static/js/1.5c5854e7.chunk.js": "/Player360/static/js/1.5c5854e7.chunk.js",
-  "static/js/1.5c5854e7.chunk.js.map": "/Player360/static/js/1.5c5854e7.chunk.js.map",
+  "static/js/1.cd8aa4e2.chunk.js": "/Player360/static/js/1.cd8aa4e2.chunk.js",
+  "static/js/1.cd8aa4e2.chunk.js.map": "/Player360/static/js/1.cd8aa4e2.chunk.js.map",
   "runtime~main.js": "/Player360/static/js/runtime~main.dcc67ec5.js",
   "runtime~main.js.map": "/Player360/static/js/runtime~main.dcc67ec5.js.map",
-  "static/media/pannellum.css": "/Player360/static/media/grabbing.3acfddd5.svg",
+  "static/media/pannellum.css": "/Player360/static/media/background.9f2131c2.svg",
   "static/css/main.d8673233.chunk.css.map": "/Player360/static/css/main.d8673233.chunk.css.map",
   "static/css/1.b5ce127d.chunk.css.map": "/Player360/static/css/1.b5ce127d.chunk.css.map",
   "index.html": "/Player360/index.html",
-  "precache-manifest.816f6fbf5174a045c9ddf88f5bdd3cf7.js": "/Player360/precache-manifest.816f6fbf5174a045c9ddf88f5bdd3cf7.js",
+  "precache-manifest.e508d79f9799db4d0aa7a0e96d9760af.js": "/Player360/precache-manifest.e508d79f9799db4d0aa7a0e96d9760af.js",
   "service-worker.js": "/Player360/service-worker.js"
 }
